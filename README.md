@@ -2,9 +2,11 @@
 
 First of all to install this project run this command
 <br>
-**php artisan config:clear
-php artisan view:clear
-php artisan route:clear**
+**php artisan config:clear**
+<br>
+**php artisan view:clear**
+<br>
+**php artisan route:clear**
 
 and then run this cmd 
 <br>
