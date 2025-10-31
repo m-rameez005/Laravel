@@ -18,8 +18,8 @@ Route::middleware([
 });
 
 Route::post('/form', [ContactController::class, 'submitForm'])->name('contact.submit');
-Route::get('stripe/checkout', [App\Http\Controllers\StripePaymentController::class, 'checkout']);
+Route::get('stripe/checkout', [App\Http\Controllers\StripePaymentController::class, 'checkout'])->name('stripe.checkout');
 // Route::post('stripe/checkout-session', [App\Http\Controllers\StripePaymentController::class, 'session'])->name('stripe.session');
-Route::get('stripe/test-session', [App\Http\Controllers\StripePaymentController::class, 'session']);
+Route::get('stripe/test-session', [App\Http\Controllers\StripePaymentController::class, 'session'])->name('stripe.session');
 Route::get('stripe/test-checkout-success', [App\Http\Controllers\StripePaymentController::class, 'success'])->name('stripe.success');
 Route::get('stripe/checkout-cancel', [App\Http\Controllers\StripePaymentController::class, 'cancel'])->name('stripe.cancel');

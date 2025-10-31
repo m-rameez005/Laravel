@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <div class="container">
+    {{-- <div class="container">
         <form action="{{ route('contact.submit') }}" method="POST">
         @csrf
             <label for="name">Name:</label>
@@ -19,6 +19,24 @@
             <br>
             <button type="submit">Send</button>
         </form>
+    </div> --}}
+
+    <div class="container">
+        <form action="{{ route('contact.submit') }}" method="POST">
+            @csrf
+            <input type="text" name="name" placeholder="Your name" required>
+            <br>
+            <input type="email" name="email" placeholder="Your email" required>
+            <br>
+            <textarea name="message" placeholder="Your message" required></textarea>
+            <br>
+            <button type="submit">Send Message</button>
+        </form>
+
+        @if(session('success'))
+            <p style="color: green;">{{ session('success') }}</p>
+        @endif
+
     </div>
 
     {{-- <div class="py-12">
